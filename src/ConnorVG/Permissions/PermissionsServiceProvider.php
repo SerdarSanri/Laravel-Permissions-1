@@ -18,7 +18,7 @@ class PermissionsServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('connorvg/permissions');
+		$this->package('connorvg/permissions', null, __DIR__.'/../../..');
 
 		include __DIR__.'/../../filters.php';
 	}
