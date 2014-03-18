@@ -4,6 +4,7 @@ class Permission extends \Illuminate\Database\Eloquent\Model {
 
 	protected $guarded = [];
 
+	// Enforcing 'permissions' for now, sorry.
 	protected $table = 'permissions';
 
 	/**
