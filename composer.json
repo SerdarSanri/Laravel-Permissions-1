@@ -1,6 +1,6 @@
 {
 	"name": "connorvg/laravel-permissions",
-	"description": "A Laravel permissions bundle that uses keys rather than roles",
+	"description": "A Laravel permissions package that uses keys rather than roles",
 	"keywords": ["laravel", "permissions"],
 	"license": "BSD",
 	"authors": [

@@ -91,7 +91,9 @@ class MigrationCommand extends Command {
     /**
      * Create the migration
      *
-     * @param  string $name
+     * @param  string $auth
+     * @param  string $table
+     * @param  string $pivot
      * @return bool
      */
     protected function createMigration( $auth, $table = 'permissions', $pivot = 'permissions_user' )
