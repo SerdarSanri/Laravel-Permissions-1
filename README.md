@@ -21,7 +21,7 @@ This command has optional parameters, they are:
 
 In the `require` key of `composer.json` file add the following
 ```javascript
-"connorvg/laravel-permission": "dev-master"
+"connorvg/laravel-permissions": "dev-master"
 ```
 
 Run the Composer update comand
