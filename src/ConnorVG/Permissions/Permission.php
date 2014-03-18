@@ -4,7 +4,7 @@ class Permission extends \Illuminate\Database\Eloquent\Model {
 
 	protected $guarded = [];
 
-	protected $table = Config::get('permissions::permissions.table');
+	protected $table = 'permissions';
 
 	/**
 	 * @Return all users that have this permission

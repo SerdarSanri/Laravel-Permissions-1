@@ -39,9 +39,9 @@ class MigrationCommand extends Command {
      */
     public function fire()
     {
-        $auth = lcfirst($this->option('auth'));
-        $table = lcfirst($this->option('table'));
+        $table = 'permissions';//lcfirst($this->option('table'));
         $pivot = lcfirst($this->option('pivot'));
+        $auth = lcfirst($this->option('auth'));
 
         $this->line('');
         $this->info( "Table name: $table" );
@@ -82,7 +82,7 @@ class MigrationCommand extends Command {
         $app = app();
 
         return array(
-            array('table', null, InputOption::VALUE_OPTIONAL, 'Table name.', $app['config']->get('permissions::permissions.table')),
+            // array('table', null, InputOption::VALUE_OPTIONAL, 'Table name.', $app['config']->get('permissions::permissions.table')),
             array('pivot', null, InputOption::VALUE_OPTIONAL, 'Pivot name.', $app['config']->get('permissions::permissions.pivot')),
             array('auth', null, InputOption::VALUE_OPTIONAL, 'Linked table (E.G: users).', $app['config']->get('auth.table')),
         );
