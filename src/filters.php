@@ -6,5 +6,5 @@ Route::filter('permissions', function($route, $request, $permissions)
 
 	$permissions = explode('&', $permissions);
 	if (!Auth::user()->hasPermissions($permissions)) 
-			return View::make('permissions::errors.permissions');
+			return View::make(Config::get('permissions::errors.permissions'));
 });
