@@ -8,8 +8,9 @@ Laravel Permissions
 ### Installation
 
 There is an extra step required to install this package, that is the migration. To get started, run:
-
-	$ php artisan permissions:migration
+```bash
+$ php artisan permissions:migration
+```
 
 This command has optional parameters, they are:
 * `auth`: The auth table, E.G: `users`.
@@ -19,12 +20,14 @@ This command has optional parameters, they are:
 ### Composer setup
 
 In the `require` key of `composer.json` file add the following
-
-    "connorvg/laravel-permission": "dev-master"
+```javascript
+"connorvg/laravel-permission": "dev-master"
+```
 
 Run the Composer update comand
-
-    $ composer update
+```bash
+$ composer update
+```
 
 ### Laravel
 
