@@ -1,0 +1,30 @@
+{
+	"name": "connorvg/laravel-permissions",
+	"description": "A Laravel permissions bundle that uses keys rather than roles",
+	"keywords": ["laravel", "permissions"],
+	"license": "BSD",
+	"authors": [
+		{
+			"name": "Connor Parks",
+			"email": "connorvg@gmx.com"
+		}
+	],
+	"require": {
+		"php": ">=5.3.0"
+	},
+	"autoload": {
+		"classmap": [
+			"src/database/migrations",
+            "src/commands"
+		],
+		"psr-4": {
+			"ConnorVG\\Permissions\\": "src/ConnorVG/Permissions"
+		}
+	},
+	"suggest": {
+		"connorvg/php-slack": "A PHP implementation for the Slack API w/ Laravel binds",
+		"connorvg/php-wtf": "A PHP implementation of my WholeTextFunctions library",
+		"connorvg/php-wolframalpha": "A Laravel wrapper for the Wolfram|Alpha API"
+	},
+	"minimum-stability": "dev"
+}
