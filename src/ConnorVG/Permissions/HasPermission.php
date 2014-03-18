@@ -11,8 +11,7 @@ trait HasPermission
 	public function permissions()
 	{
 		return $this->belongsToMany('ConnorVG\Permissions\Permission', 
-			Config::get('permissions::permission.table'),
-			'user_id', 'permission_id');
+			'permissions', 'user_id', 'permission_id');
 	}
 
 	/**
