@@ -4,6 +4,10 @@ use Config;
 
 trait HasPermission
 {
+
+	/**
+	 * @Return all permissions that this user has
+	 */
 	public function permissions()
 	{
 		return $this->belongsToMany('ConnorVG\Permissions\Permission', 
@@ -11,11 +15,23 @@ trait HasPermission
 			'user_id', 'permission_id');
 	}
 
+	/**
+	 * Has a permission.
+	 *
+	 * @param string $key unique key
+	 * @return bool
+	 */
 	public function hasPermission($key)
 	{
 		return $this->hasPermissions([$key]);
 	}
 
+	/**
+	 * Has permissions.
+	 *
+	 * @param array $keys unique keys
+	 * @return bool
+	 */
 	public function hasPermissions($keys)
 	{
 		foreach ($this->permissions as $permission)
@@ -35,11 +51,23 @@ trait HasPermission
 		return false;
 	}
 
+	/**
+	 * Adds a permission.
+	 *
+	 * @param string $key unique key
+	 * @return this instance
+	 */
 	public function attachPermission($key)
 	{
 		return $this->attachPermissions([ $key ]);
 	}
 
+	/**
+	 * Adds a collection of permissions.
+	 *
+	 * @param array $keys unique keys
+	 * @return this instance
+	 */
 	public function attachPermissions($keys)
 	{
 		if (count($keys) < 1) 
@@ -62,11 +90,23 @@ trait HasPermission
 		return $this;
 	}
 
+	/**
+	 * Removes a permission.
+	 *
+	 * @param string $key unique key
+	 * @return this instance
+	 */
 	public function detachPermission($key)
 	{
 		return $this->detachPermissions([ $key ]);
 	}
 
+	/**
+	 * Removes a collection of permissions.
+	 *
+	 * @param array $keys unique keys
+	 * @return this instance
+	 */
 	public function detachPermissions($keys)
 	{
 		if (count($keys) < 1) 

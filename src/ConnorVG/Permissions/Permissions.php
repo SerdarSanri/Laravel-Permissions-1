@@ -19,6 +19,13 @@ class Permissions
 		$this->app = $app;
 	}
 
+	/**
+	 * Create a new permission.
+	 *
+	 * @param string $name name
+	 * @param string $key unique key
+	 * @return ConnorVG\Permissions\Permission
+	 */
 	public function create($name, $key)
 	{
 		return Permission::create([
@@ -27,6 +34,13 @@ class Permissions
 		]);
 	}
 
+	/**
+	 * Checks a user has at-least one of a permisson
+	 *
+	 * @param HasPermission $user owner of HasPermission
+	 * @param array $permissions and array of permission keys
+	 * @return ConnorVG\Permissions\Permission
+	 */
 	public function hasAtleastOneOf($user, $permissions)
 	{
 		foreach ($permissions as $permission)
